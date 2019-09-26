@@ -1,0 +1,75 @@
+﻿@model Blog.Models.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoUsuario)
+        </dt>
+        <dd>
+
+            @*Html.DisplayFor(model => model.TipoUsuario)*@
+            @if (Model.TipoUsuario == 1)
+            {
+                <label> Administrador</label>
+            }
+            else
+            {
+                @if (Model.TipoUsuario == 2)
+                {
+                    <label>Técnico</label>
+                }
+                else
+                {
+                    @if (Model.TipoUsuario == 3)
+                    {
+                        <label>Desenvolvedor</label>
+                    }
+                    else
+                    {
+                        <label>Usuário</label>
+                    }
+
+                }
+            }
+            </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UsuarioId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

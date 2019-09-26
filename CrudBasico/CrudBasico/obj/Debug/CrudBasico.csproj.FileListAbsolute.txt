@@ -1,0 +1,11 @@
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\bin\Debug\CrudBasico.exe.config
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\bin\Debug\CrudBasico.exe
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\bin\Debug\CrudBasico.pdb
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.csprojAssemblyReference.cache
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.Menu.resources
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.Properties.Resources.resources
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.csproj.GenerateResource.cache
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.csproj.CoreCompileInputs.cache
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.exe
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.pdb
+C:\Users\felip\OneDrive\Documents\Projetos\Csharp\CrudBasico\CrudBasico\obj\Debug\CrudBasico.CadastraCliente.resources

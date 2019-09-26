@@ -1,0 +1,71 @@
+﻿@model Blog.Models.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoUsuario)
+        </dt>
+        <dd>
+            @*Html.DisplayFor(model => model.TipoUsuario)*@
+            @if (Model.TipoUsuario == 1)
+            {
+                <label> Administrador</label>
+            }
+            else
+            {
+                @if (Model.TipoUsuario == 2)
+                {
+                    <label>Técnico</label>
+                }
+                else
+                {
+                    @if (Model.TipoUsuario == 3)
+                    {
+                        <label>Desenvolvedor</label>
+                    }
+                    else
+                    {
+                        <label>Usuário</label>
+                    }
+
+                }
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UsuarioId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

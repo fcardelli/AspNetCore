@@ -1,0 +1,53 @@
+﻿@model CrudBasicoMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd>
+            @*Html.DisplayFor(model => model.Tipo)*@
+
+            @if (Model.Tipo == 1)
+            {
+                <label>Administrador</label>
+            }
+            else
+            {
+                @if (Model.Tipo == 2)
+                {
+                    <label>Técnico</label>
+                }
+                else
+                {
+                    <label>Usuário Normal</label>
+                }
+            }
+
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
