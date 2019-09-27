@@ -1,0 +1,114 @@
+﻿@model IEnumerable<BlogMVC.Models.Entidades.Post>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.Sobrenome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.TipoUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blog.BlogId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blog.Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blog)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Email)
+            </td>
+            <td>
+                @if (item.Usuario.TipoUsuario == 1)
+                {
+                    <label> Administrador</label>
+                }
+                else
+                {
+                    @if (item.Usuario.TipoUsuario == 2)
+                    {
+                        <label>Técnico</label>
+                    }
+                    else
+                    {
+                        @if (item.Usuario.TipoUsuario == 3)
+                        {
+                            <label>Desenvolvedor</label>
+                        }
+                        else
+                        {
+                            <label>Usuário</label>
+                        }
+
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Blog.BlogId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Blog.Url)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PostId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PostId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PostId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
